@@ -210,7 +210,7 @@ export default function App() {
               <div className="mb-12 text-base md:text-lg text-justify">
                 <p className="mb-8">
                   <span className="float-left text-6xl md:text-7xl font-serif font-bold text-slate-900 mr-4 mt-1 leading-none drop-shadow-sm">本</span>
-                  期专刊带来的是 CIDR 2026 的论文速递与深度解读，涵盖了大语言模型（LLM）与数据库融合、数据平台优化、分布式一致性、SQL 与数据建模、软硬件协同加速等前沿方向。本期共收录 34 篇论文速递及 6 篇深度解读，均来自顶尖高校、主流科技厂商和前沿研究机构。
+                  期专刊带来的是 CIDR 2026 的论文速递与深度解读，涵盖了大语言模型（LLM）与数据库融合、数据平台优化、分布式一致性、SQL 与数据建模、软硬件协同加速等前沿主题。本期共收录 34 篇论文速递及 6 篇深度解读，均来自顶尖高校、主流科技厂商和前沿研究机构。
                 </p>
                 <p className="text-slate-500 italic border-l-4 border-blue-100 pl-6 py-2 text-base">
                   《CIDR 2026 技术专刊》分为<strong className="text-blue-800 font-bold not-italic">论文速递</strong>与<strong className="text-blue-800 font-bold not-italic">深度解读</strong>两大部分，具体分类情况如下：
@@ -225,7 +225,7 @@ export default function App() {
                       <h3 className="font-sans font-bold text-slate-900 uppercase tracking-wider text-sm">Session 1: LLMs for Databases</h3>
                     </div>
                     <p className="text-sm text-slate-600 pl-11 leading-loose">
-                      方向论文 5 篇，包括连接大模型与数据库通用工具包（阿里）、多模态数据库（华盛顿大学）、AI 驱动分析引擎（MIT）、LLM 压缩经济学（慕尼黑工大等）、Prompt 视角优化（布朗大学等）。
+                      主题论文 5 篇，包括连接大模型与数据库通用工具包（阿里）、多模态数据库（华盛顿大学）、AI 驱动分析引擎（MIT）、LLM 压缩经济学（慕尼黑工大等）、Prompt 视角优化（布朗大学等）。
                     </p>
                   </div>
 
@@ -235,7 +235,7 @@ export default function App() {
                       <h3 className="font-sans font-bold text-slate-900 uppercase tracking-wider text-sm">Session 2: Data Platform Benchmarking</h3>
                     </div>
                     <p className="text-sm text-slate-600 pl-11 leading-loose">
-                      方向论文 5 篇，包括多租户 OLTP 架构（Salesforce）、端到端 Serverless 分析（ETH）、工作负载幸存者偏差分析（宾大）、PostgreSQL 向量搜索解耦（普渡大学）、位图过滤器实践（微软等）。
+                      主题论文 5 篇，包括多租户 OLTP 架构（Salesforce）、端到端 Serverless 分析（ETH）、工作负载幸存者偏差分析（宾大）、PostgreSQL 向量搜索解耦（普渡大学）、位图过滤器实践（微软等）。
                     </p>
                   </div>
 
@@ -245,7 +245,7 @@ export default function App() {
                       <h3 className="font-sans font-bold text-slate-900 uppercase tracking-wider text-sm">Session 3: Text-to-SQL & Agents</h3>
                     </div>
                     <p className="text-sm text-slate-600 pl-11 leading-loose">
-                      方向论文 5 篇，包括 Text-to-SQL 基准测试剖析（UIUC）、优化器验证 LLM 重写（微软）、企业级基准构建系统（TUM等）、智能体数据流安全控制（哥伦比亚大学）、智能体优先架构（UC Berkeley）。
+                      主题论文 5 篇，包括 Text-to-SQL 基准测试剖析（UIUC）、优化器验证 LLM 重写（微软）、企业级基准构建系统（TUM等）、智能体数据流安全控制（哥伦比亚大学）、智能体优先架构（UC Berkeley）。
                     </p>
                   </div>
 
@@ -255,7 +255,7 @@ export default function App() {
                       <h3 className="font-sans font-bold text-slate-900 uppercase tracking-wider text-sm">Session 4: Distributed Coordination</h3>
                     </div>
                     <p className="text-sm text-slate-600 pl-11 leading-loose">
-                      方向论文 4 篇，包括面向数据的工作流 AC/DC 语义（MIT等）、地理分布式半线性化一致性（KTH等）、多平台众包规制系统（石溪大学等）、分区数据库灵活复制（哥伦比亚大学等）。
+                      主题论文 4 篇，包括面向数据的工作流 AC/DC 语义（MIT等）、地理分布式半线性化一致性（KTH等）、多平台众包规制系统（石溪大学等）、分区数据库灵活复制（哥伦比亚大学等）。
                     </p>
                   </div>
                 </div>
@@ -267,7 +267,7 @@ export default function App() {
                       <h3 className="font-sans font-bold text-slate-900 uppercase tracking-wider text-sm">Session 5: SQL and Data Modeling</h3>
                     </div>
                     <p className="text-sm text-slate-600 pl-11 leading-loose">
-                      方向论文 4 篇，包括 IN 谓词求值优化（慕尼黑工大）、递归查询跨范式编译（爱丁堡大学）、图视图语义数据建模（谷歌）、抽象关系查询语言（东北大学）。
+                      主题论文 4 篇，包括 IN 谓词求值优化（慕尼黑工大）、递归查询跨范式编译（爱丁堡大学）、图视图语义数据建模（谷歌）、抽象关系查询语言（东北大学）。
                     </p>
                   </div>
 
@@ -277,7 +277,7 @@ export default function App() {
                       <h3 className="font-sans font-bold text-slate-900 uppercase tracking-wider text-sm">Session 6: Data Integration</h3>
                     </div>
                     <p className="text-sm text-slate-600 pl-11 leading-loose">
-                      方向论文 3 篇，包括可视化数据整理（犹他大学等）、数据意图关系化（芝加哥大学）、自治数据代理协作（达姆施塔特工业大学）。
+                      主题论文 3 篇，包括可视化数据整理（犹他大学等）、数据意图关系化（芝加哥大学）、自治数据代理协作（达姆施塔特工业大学）。
                     </p>
                   </div>
 
@@ -287,7 +287,7 @@ export default function App() {
                       <h3 className="font-sans font-bold text-slate-900 uppercase tracking-wider text-sm">Session 7: Memory & I/O</h3>
                     </div>
                     <p className="text-sm text-slate-600 pl-11 leading-loose">
-                      方向论文 4 篇，包括 xNVMe 灵活 I/O 扩展（哥本哈根信息技术大学等）、声明式内存服务（德累斯顿工业大学等）、混合负载 GPU 调度（EPFL等）、云硬件演进追踪（慕尼黑工大）。
+                      主题论文 4 篇，包括 xNVMe 灵活 I/O 扩展（哥本哈根信息技术大学等）、声明式内存服务（德累斯顿工业大学等）、混合负载 GPU 调度（EPFL等）、云硬件演进追踪（慕尼黑工大）。
                     </p>
                   </div>
 
@@ -297,7 +297,7 @@ export default function App() {
                       <h3 className="font-sans font-bold text-slate-900 uppercase tracking-wider text-sm">Session 8: Hardware Acceleration</h3>
                     </div>
                     <p className="text-sm text-slate-600 pl-11 leading-loose">
-                      方向论文 4 篇，包括 GPU 原生 SQL 引擎（威斯康星大学等）、光栅化数据库列索引（微软等）、片上 NPU 数据库集成（TU Ilmenau）、哈希连接与 CXL 内存池化（新加坡国立大学等）。
+                      主题论文 4 篇，包括 GPU 原生 SQL 引擎（威斯康星大学等）、光栅化数据库列索引（微软等）、片上 NPU 数据库集成（TU Ilmenau）、哈希连接与 CXL 内存池化（新加坡国立大学等）。
                     </p>
                   </div>
                 </div>
