@@ -648,8 +648,9 @@ export const deepDivePapers = [
       }
     ],
     "extendedResources": [ // 扩展资料名称及其链接，若无链接，则无需填写 link 字段
+      { "name": '论文原文', "link": 'https://vldb.org/cidrdb/papers/2026/p32-liu.pdf' },
       { "name": '论文双语翻译', "link": 'http://tprd.dameng.com/outline/s/8900fea2-4484-4e36-b912-8857ffae75eb' },
-      { "name": '论文解读', "link": 'http://muratbuffalo.blogspot.com/2025/09/supporting-our-ai-overlords-redesigning.html' }
+      { "name": '论文解读', "link": 'http://tprd.dameng.com/outline/s/c15dae6e-2ad3-440d-b52c-fb6c78d19549' }
     ]
   },
   {
