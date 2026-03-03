@@ -579,7 +579,7 @@ export const deepDivePapers = [
       },
       {
         "q": '针对分布式数据仓库（如Apache Doris），Sirius如何实现多节点间的数据协作？ ',
-        "a": '在多节点分布式环境中，Sirius引入了专门的**交换服务层（Exchange Service Layer）**来协调节点间的数据流转。交换服务层将广播、数据混洗（shuffle）和合并等多节点通信模式抽象为专用的物理算子，并在底层全面采用了NVIDIA的NCCL通信原语来实现高速的网络互联。',
+        "a": '在多节点分布式环境中，Sirius引入了专门的**交换服务层**（Exchange Service Layer）来协调节点间的数据流转。交换服务层将广播、数据混洗（shuffle）和合并等多节点通信模式抽象为专用的物理算子，并在底层全面采用了NVIDIA的NCCL通信原语来实现高速的网络互联。',
         "image": 'figures/3-3.jpg'
       },
       {
