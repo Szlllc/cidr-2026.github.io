@@ -206,12 +206,17 @@ export default function App() {
                 <span className="text-slate-400 font-serif tracking-widest">元宵</span>
               </div>
 
-            <div className="text-slate-700 leading-loose font-serif">
+              <div className="text-slate-700 leading-loose font-serif">
               <div className="mb-12 text-base md:text-lg text-justify">
                 <p className="mb-8">
                   <span className="float-left text-6xl md:text-7xl font-serif font-bold text-slate-900 mr-4 mt-1 leading-none drop-shadow-sm">本</span>
                   期专刊带来的是 CIDR 2026 的论文速递与深度解读，涵盖了大语言模型（LLM）与数据库融合、数据平台优化、分布式一致性、SQL 与数据建模、软硬件协同加速等前沿主题。本期共收录 34 篇论文速递及 6 篇深度解读，均来自顶尖高校、主流科技厂商和前沿研究机构。
                 </p>
+                
+                <p className="mb-8">
+                  <strong>关于 CIDR：</strong>CIDR（Conference on Innovative Data Systems Research）由数据库领域的先驱 Michael Stonebraker、Jim Gray 和 David DeWitt 于 2002 年共同创立。与 SIGMOD、VLDB 等侧重于严谨理论证明和详尽性能评估的主流数据库“三大顶会”不同，CIDR 更加强调系统架构的视角。该会议专为极具创新性、前瞻性甚至带有颠覆性的数据管理系统架构理念提供发表与交流的平台，高度看重系统的实际构建经验、务实的工程洞察以及打破常规的技术愿景。第 16 届会议（CIDR 2026）于 2026 年 1 月 18 日至 21 日在美国加州 Chaminade 举办。点击查看官方<a href="https://www.cidrdb.org/cidr2026/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline font-bold transition-colors">会议链接</a>。
+                </p>
+
                 <p className="text-slate-500 italic border-l-4 border-blue-100 pl-6 py-2 text-base">
                   《CIDR 2026 技术专刊》分为<strong className="text-blue-800 font-bold not-italic">论文速递</strong>与<strong className="text-blue-800 font-bold not-italic">深度解读</strong>两大部分，具体分类情况如下：
                 </p>
