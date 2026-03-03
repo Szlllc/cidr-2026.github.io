@@ -182,7 +182,7 @@ export const expressPapers = [
       recommendation: 5, 
       authors: 'Michael Stonebraker, Xinjing Zhou, Peter Kraft, Qian Li', 
       affiliation: 'Massachusetts Institute of Technology (麻省理工学院), DBOS', 
-      abstract: '面向数据的**工作流系统**易因故障出现执行异常，且错误处理代码占比极高，现有**持久化执行**仅能保障正向流程运行，无法解决异常后的一致性问题，成为技术瓶颈。为此，研究提出将 ACID 特性从单事务扩展至整个工作流的 **AC/DC 语义保障**，打造基于数据库的工作流原型系统，打破传统工作流在故障恢复与并发一致性上的局限。该系统核心创新体现在两点：1）**持久化计算机制**，将工作流日志与数据库操作原子提交，实现步骤的恰好一次执行，故障后可从最后完成步骤恢复；2）**双回滚机制**，支持基于保存点的**物理回滚**和**Saga补偿回滚**，前者保障强一致性，后者提升并发性能。研究基于电商结账工作流开展实验，发现低竞争场景下物理回滚工作流性能更优，高竞争或长步骤场景下补偿回滚方案吞吐更高且无中止，物理回滚则会出现较高中止率。该原型已在 DBOS 中实现，相关代码完成原型开发。（开源链接：https://github.com/DBOS-project/dbos-transact-py）', // 摘要
+      abstract: '面向数据的**工作流系统**易因故障出现执行异常，且错误处理代码占比极高，现有**持久化执行**仅能保障正向流程运行，无法解决异常后的一致性问题。为此，研究提出将 ACID 特性从单事务扩展至整个工作流的 **AC/DC 语义保障**，打造基于数据库的工作流原型系统，打破传统工作流在故障恢复与并发一致性上的局限。该系统核心创新体现在两点：1）**持久化计算机制**，将工作流日志与数据库操作原子提交，实现步骤的恰好一次执行，故障后可从最后完成步骤恢复；2）**双回滚机制**，支持基于保存点的**物理回滚**和**Saga补偿回滚**，前者保障强一致性，后者提升并发性能。研究基于电商结账工作流开展实验，发现低竞争场景下物理回滚工作流性能更优，高竞争或长步骤场景下补偿回滚方案吞吐更高且无中止，物理回滚则会出现较高中止率。该原型已在 DBOS 中实现，相关代码完成原型开发。（开源链接：https://github.com/DBOS-project/dbos-transact-py）', // 摘要
       link: 'https://mail.vldb.org/cidrdb/papers/2026/p9-stonebraker.pdf', 
       tags: ['工作流', '持久化', '原子性', '并发性能'] 
     },
@@ -193,7 +193,7 @@ export const expressPapers = [
       recommendation: 3, 
       authors: 'Jonathan Arns, Harald Ng, Kyriakos Psarakis, Asterios Katsifodimos, Paris Carbone', 
       affiliation: 'KTH Royal Institute of Technology（瑞典皇家理工学院）, Ververica GmbH(维沃瑞卡有限公司), Delft University of Technology(荷兰代尔夫特理工大学)', 
-      abstract: '现有**地理分布式应用**的混合一致性模型因采用二元冲突视角、忽视操作间的非对称依赖，存在过度协调的问题，难以**兼顾低延迟与状态一致性**。面对这一挑战，研究提出**半线性化（SL）一致性模型**，并实现了 DeMon 地理复制内存存储系统，核心通过捕捉操作间的**定向依赖关系**，仅在必要时执行协调，打破强、弱一致性的僵化二分局限。研究首先形式化定义非对称操作依赖，精准表达应用不变量，摆脱传统二元冲突的限制；其次设计半线性化顺序，将强操作严格排序、弱操作以因果一致性归为数据包，仅当强操作形成 “事件视界” 时才统一收敛发散状态；最后 DeMon 通过共识协议处理强操作、因果广播执行弱操作，结合水印机制保障操作间的正确序关系。在跨 5 个地域的 RUBiS 基准测试中，该系统让占比 60% 的 Bid 操作实现亚毫秒级延迟，相比主流系统，其最频繁操作的延迟降低四个数量级，且在吞吐量与协调开销上均展现出更优的表现，强操作延迟与纯共识协议持平，弱操作则保持无协调的高效执行。（开源链接：https://github.com/JonathanArns/demon）', 
+      abstract: '现有**地理分布式应用**的混合一致性模型因采用二元冲突视角、忽视操作间的非对称依赖，存在过度协调的问题，难以**兼顾低延迟与状态一致性**。面对这一挑战，研究提出**半线性化（SL）一致性模型**，并实现了 DeMon 地理复制内存存储系统，通过捕捉操作间的**定向依赖关系**，仅在必要时执行协调，打破强、弱一致性的僵化二分局限。研究首先形式化定义非对称操作依赖，精准表达应用不变量，摆脱传统二元冲突的限制；其次设计半线性化顺序，将强操作严格排序、弱操作以因果一致性归为数据包，仅当强操作形成 “事件视界” 时才统一收敛发散状态；最后 DeMon 通过共识协议处理强操作、因果广播执行弱操作，结合水印机制保障操作间的正确序关系。在跨 5 个地域的 RUBiS 基准测试中，该系统让占比 60% 的 Bid 操作实现亚毫秒级延迟，相比主流系统，其最频繁操作的延迟降低四个数量级，且在吞吐量与协调开销上均展现出更优的表现，强操作延迟与纯共识协议持平，弱操作则保持无协调的高效执行。（开源链接：https://github.com/JonathanArns/demon）', 
       link: 'https://www.vldb.org/cidrdb/papers/2026/p20-arns.pdf', 
       tags: ['地理分布式应用', '半线性化', '一致性模型'] 
     },
@@ -347,7 +347,7 @@ export const expressPapers = [
       recommendation: 5, 
       authors: 'Bobbi Yogatama, Yifei Yang, Kevin Kristensen, Devesh Sarda, Abigale Kim, Adrian Cockcroft, Yu Teng, Joshua Patterson, Gregory Kimball, Wes McKinney, Weiwei Gong, Xiangyao Yu', 
       affiliation: 'University of Wisconsin-Madison(威斯康星大学麦迪逊分校), NVIDIA(英伟达), Oracle(甲骨文), Posit PBC(波西特公益公司), OrionX(奥瑞恩 X 公司)', 
-      abstract: '**GPU 数据分析**曾受限于显存不足、数据移动瓶颈、硬件成本高和开发难度大等问题，当下硬件的显存扩容、高速互连技术发展及成本下降，叠加软件生态的成熟，为突破该瓶颈提供了基础，该研究为此提出 **GPU 原生 SQL 引擎 Sirius**，以实现对现有数据系统的**即插式加速**，打破 GPU 数据分析的落地局限。Sirius 采用 **GPU 原生执行**设计，将 GPU 作为核心执行引擎，全程在 GPU 完成查询计划执行，降低架构设计复杂度；依托 **Substrait 通用查询计划格式**实现即插式加速，无需修改宿主系统即可完成 GPU 加速适配；搭建模块化架构，复用成熟 GPU 库实现核心算子，还支持算子实现的**灵活切换**并设计 **CPU 降级机制**。在 TPC-H 和 ClickBench 基准测试中，Sirius 为单节点 DuckDB 带来 8.3 倍和 7.4 倍的成本效率提升，为分布式 Apache Doris 实现最高 12.5 倍的性能加速，在分布式 TPC-H 测试中也展现出优于 Doris 和 ClickHouse 的执行效率。（开源链接：https://github.com/sirius-db/sirius）', 
+      abstract: '**GPU 数据分析**曾受限于显存不足、数据移动瓶颈、硬件成本高和开发难度大等问题，当下硬件的显存扩容、高速互连技术发展及成本下降，叠加软件生态的成熟，为突破该瓶颈提供了基础，该研究为此提出 **GPU 原生 SQL 引擎 Sirius**，以实现对现有数据系统的**即插式加速**，打破 GPU 数据分析的落地局限。Sirius 采用 **GPU 原生执行**设计，将 GPU 作为核心执行引擎，全程在 GPU 完成查询计划执行，降低架构设计复杂度；依托 **Substrait 通用查询计划格式**实现即插式加速，无需修改宿主系统即可完成 GPU 加速适配；搭建模块化架构，复用成熟 GPU 库实现核心算子，还支持算子实现方式的**灵活切换**并设计 **CPU 降级机制**。在 TPC-H 和 ClickBench 基准测试中，Sirius 为单节点 DuckDB 带来 8.3 倍和 7.4 倍的成本效率提升，为分布式 Apache Doris 实现最高 12.5 倍的性能加速，在分布式 TPC-H 测试中也展现出优于 Doris 和 ClickHouse 的执行效率。（开源链接：https://github.com/sirius-db/sirius）', 
       link: 'https://www.cidrdb.org/cidr2026/papers/p12-yogatama.pdf', 
       tags: ['GPU', '即插式加速'] 
     },
@@ -584,12 +584,13 @@ export const deepDivePapers = [
       },
       {
         "q": '在单机和分布式两种不同场景下，集成了Sirius的原有数据库获得了怎样的性能提升？ ',
-        "a": '在单机环境的性能测试中，当Sirius作为DuckDB的即插即用加速器时，在**相同的云端硬件租赁成本下**，Sirius在TPC-H基准上实现了8.3倍的成本效率提升，在ClickBench上实现了7.4倍的提升。在分布式环境中接入Apache Doris时，Sirius在相同查询计划下使得执行速度最高提升了12.5倍。'
+        "a": '在单机环境的性能测试中，当Sirius作为DuckDB的即插即用加速器时，在**相同的云端硬件租赁成本下**，Sirius在TPC-H基准上实现了8.3倍的成本效率提升，在ClickBench上实现了7.4倍的提升。在分布式环境中接入Apache Doris时，Sirius在相同查询计划下使得执行速度最高提升了12.5倍。',
+        "image": 'figures/3-4.png',
       },
       {
         "q": '作者计划在未来向哪些方向突破以支持更复杂的工业级应用？',
         "a": '为了应对超出内存容量的大规模数据集，开发团队计划将系统扩展为支持**核外执行（Out-of-Core）**，允许将数据溢出到固定内存或磁盘，并引入批处理流水线模型。此外，团队还计划支持单节点多GPU架构，丰富复杂数据类型与高级操作符（如向量检索和用户定义函数），并**进一步覆盖如DataFusion等更多兼容Substrait的现代数据系统**。',
-        "image": 'figures/3-4.png',
+       
       }
     ],
     "extendedResources": [ // 扩展资料名称及其链接，若无链接，则无需填写 link 字段
