@@ -211,7 +211,7 @@ export default function App() {
                 {/* 第一段：核心导读，保留大字首字下沉，作为视觉重点 */}
                 <p className="mb-8">
                   <span className="float-left text-6xl md:text-7xl font-serif font-bold text-slate-900 mr-4 mt-1 leading-none drop-shadow-sm">本</span>
-                  期专刊带来的是 CIDR 2026 的论文速递与深度解读，涵盖了大语言模型（LLM）与数据库融合、数据平台优化、分布式一致性、SQL 与数据建模、软硬件协同加速等前沿主题。本期共收录 34 篇论文速递及 6 篇深度解读，均来自顶尖高校、主流科技厂商和前沿研究机构。
+                  期专刊带来的是 CIDR 2026 的论文速递与深度解读，涵盖了大语言模型（LLM）与数据库融合、数据平台优化、分布式一致性、SQL 与数据建模、软硬件协同加速等前沿主题。本期共收录 34 篇论文速递及 6 篇深度解读，均来自顶尖高校、主流科技厂商和前沿研究机构。所有论文原文均已整理至部门 <a href="http://tprd.dameng.com/gitlab/linchen/paper/-/tree/main/cidr-2026?ref_type=heads" className="text-blue-500 hover:text-blue-600">GitLab 仓库</a>。
                 </p>
                 
                 {/* 第二段：CIDR 背景介绍，弱化的引用框样式，缩小字号 */}
