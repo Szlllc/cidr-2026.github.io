@@ -785,7 +785,8 @@ export const deepDivePapers = [
     ],
     "extendedResources": [ // 扩展资料名称及其链接，若无链接，则无需填写 link 字段
       { "name": '项目主页', "link": 'https://github.com/fukien/hashjoins-meet-cxl' },
-      { "name": 'CIDR 2026 论文原文', "link": 'https://www.cidrdb.org/cidr2026/papers/p1-huang.pdf'}
+      { "name": 'CIDR 2026 论文原文', "link": 'https://www.cidrdb.org/cidr2026/papers/p1-huang.pdf'},
+      { "name": '论文双语翻译', "link": 'http://tprd.dameng.com/outline/s/76e23935-111b-4af4-9276-5c3fe024d37b'}
     ]
   },
 ];
