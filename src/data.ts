@@ -580,12 +580,11 @@ export const deepDivePapers = [
       {
         "q": '针对分布式数据仓库（如Apache Doris），Sirius如何实现多节点间的数据协作？ ',
         "a": '在多节点分布式环境中，Sirius引入了专门的**交换服务层（Exchange Service Layer）**来协调节点间的数据流转。交换服务层将广播、数据混洗（shuffle）和合并等多节点通信模式抽象为专用的物理算子，并在底层全面采用了NVIDIA的NCCL通信原语来实现高速的网络互联。',
-        "image": 'figures/3-3.png'
+        "image": 'figures/3-3.jpg'
       },
       {
         "q": '在单机和分布式两种不同场景下，集成了Sirius的原有数据库获得了怎样的性能提升？ ',
-        "a": '在单机环境的性能测试中，当Sirius作为DuckDB的即插即用加速器时，在**相同的云端硬件租赁成本下**，Sirius在TPC-H基准上实现了8.3倍的成本效率提升，在ClickBench上实现了7.4倍的提升。在分布式环境中接入Apache Doris时，Sirius在相同查询计划下使得执行速度最高提升了12.5倍。',
-        "image": 'figures/3-4.png',
+        "a": '在单机环境的性能测试中，当Sirius作为DuckDB的即插即用加速器时，在**相同的云端硬件租赁成本下**，Sirius在TPC-H基准上实现了8.3倍的成本效率提升，在ClickBench上实现了7.4倍的提升。在分布式环境中接入Apache Doris时，Sirius在相同查询计划下使得执行速度最高提升了12.5倍。'
       },
       {
         "q": '作者计划在未来向哪些方向突破以支持更复杂的工业级应用？',
