@@ -441,7 +441,7 @@ export const deepDivePapers = [
     },
     {
       "name": "PostgreSQL-V 论文双语翻译",
-      "link": "http://tprd.dameng.com/outline/s/bf129af5-dbf5-4f70-bef5-c10ed569685b/doc/gcm-cidr-2026-fast-vector-search-in-postgresql-a-decoupled-approach-8YMBMg3Ks9"
+      "link": "http://tprd.dameng.com/outline/s/64ad1356-8708-4e1b-888a-d5bdd434d27c"
     },
     {
       "name": "PostgreSQL-V 开源代码仓库",
@@ -529,7 +529,7 @@ export const deepDivePapers = [
     },
     {
       "name": "论文双语翻译 (CIDR 2026)-I Can’t Believe It’s Not Yannakakis: Pragmatic Bitmap Filters in Microsoft SQL Server",
-      "link": "http://tprd.dameng.com/outline/s/bf129af5-dbf5-4f70-bef5-c10ed569685b/doc/gcmcidr-2026-i-cant-believe-its-not-yannakakis-pragmatic-bitmap-filters-in-microsoft-sql-server-HctHAFQRaY"
+      "link": "http://tprd.dameng.com/outline/s/cceeeb3d-b1b0-4e94-b0de-bc462e677da1"
     },
     {
       "name": "SQL Server 官方 GitHub 仓库",
