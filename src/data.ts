@@ -17,7 +17,7 @@ export const expressPapers = [
     "recommendation": 5,
     "authors": "Lianggui Weng, Dandan Liu, Rong Zhu, Bolin Ding, Jingren Zhou",
     "affiliation": "Alibaba Group（阿里巴巴）",
-    "abstract": "当前 LLM 与数据库交互的设计在易用性、安全性、权限管理和数据传输效率方面仍存在关键局限，为了应对这些挑战，该研究提出了通用的连接工具包框架 BridgeScope。通过将 SQL 操作模块化为**细粒度**的工具、将工具实现与数据库权限和用户定义的安全策略相对齐以及建立绕过模型中转的工具间数据通信代理，BridgeScope显著提升了 Agent 任务执行的鲁棒性。实验证明，该方法在减少计算开销的同时，确保了严密的权限控制。现有的数据库工具通常只提供 execute_sql 等粗粒度工具。这导致模型对用户权限、事务状态缺乏感知，容易引发误操作，如在只读任务中尝试 DROP 操作。BridgeScope 将数据库操作封装为符合 **MCP 标准**的服务，并在此基础上实现了细粒度的工具拆分，如单独的 select、begin、commit 工具。这种模式利用了 MCP 的标准框架，同时引入了\"代理机制（Proxy）\"来解决 MCP 默认模式中数据必须经过 LLM 造成的 Token 瓶颈问题。BridgeScope 最多可减少 80% 的 Token 使用量，并能够支持现有工具包无法处理的数据密集型工作流。（开源链接：https://github.com/duoyw/bridgescope）",
+    "abstract": "当前 LLM 与数据库交互的设计在易用性、安全性、权限管理和数据传输效率方面仍存在关键局限，为了应对这些挑战，该研究提出了通用的连接工具包框架 BridgeScope。通过将 SQL 操作模块化为**细粒度**的工具、将工具实现与数据库权限和用户定义的安全策略相对齐以及建立绕过模型中转的工具间数据通信代理，BridgeScope显著提升了 Agent 任务执行的鲁棒性。实验证明，该方法在减少计算开销的同时，确保了严密的权限控制。现有的数据库工具通常只提供 execute_sql 等粗粒度工具。这导致模型对用户权限、事务状态缺乏感知，容易引发误操作，如在只读任务中尝试 DROP 操作。BridgeScope 将数据库操作封装为符合 **MCP 标准**的服务，并在此基础上实现了细粒度的工具拆分，如单独的 select、begin、commit 工具。这种模式利用了 MCP 的标准框架，同时引入了\"代理机制（Proxy）\"来解决 MCP 默认模式中数据必须经过 LLM 造成的 Token 瓶颈问题。BridgeScope 最多可减少 80% 的 Token 使用量，并能够支持现有工具包无法处理的数据密集型工作流。开源链接：https://github.com/duoyw/bridgescope",
     "link": "https://vldb.org/cidrdb/papers/2026/p4-weng.pdf",
     "tags": ["LLM Agent", "数据库安全", "事务管理", "数据传输优化"]
   },
@@ -50,7 +50,7 @@ export const expressPapers = [
     "recommendation": 4,
     "authors": "Andreas Kipf, Tobias Schmidt, Ping-Lin Kuo, Skander Krid, Moritz Rengert, Luca Heller, Andreas Zimmerer, Mihail Stoian, Varun Pandey, Alexander van Renen",
     "affiliation": "University of Technology Nuremberg（纽伦堡理工大学）、Technical University of Munich（慕尼黑工业大学）",
-    "abstract": "该研究对 LLM 在数据压缩领域的应用前景进行了深入的技术经济学剖析。该研究通过实验证实，虽然 LLM 模型利用高跨熵预测能力能实现超越 zstd 两倍以上的压缩比，但昂贵的 GPU 推理时间使其在**当前阶段难以大规模商用**。研究指出，按照当前的计算和存储成本，基于大语言模型的压缩需要10年才能\"回本\"，省下的每一分存储费，需要攒足 10 年才能抵消掉当初为了执行压缩而付出的那笔算力成本。与传统压缩方法相比，基于大语言模型的压缩需要120年才能赶上传统压缩方法。与那些免费或极低成本的传统压缩方案相比，LLM 压缩多省出来的存储费，需要存 120 年才能把多花的算力费赚回来。研究进一步预测了硬件算力与存储成本的演进曲线，明确了 AI 压缩走向实用化的时间节点。随着硬件和模型效率的预期提升，基于大语言模型的压缩可能在未来十年内具备经济可行性。尽管现在看来极其不划算，但随着 GPU 和专用 AI 芯片（如 NPU）的性能提升和价格下降，成本曲线正在快速下降，在未来十年内AI 压缩省下的钱将能快速覆盖其计算成本，具备实际部署的价值。（开源链接：https://github.com/utndatasystems/compression-economics）",
+    "abstract": "该研究对 LLM 在数据压缩领域的应用前景进行了深入的技术经济学剖析。该研究通过实验证实，虽然 LLM 模型利用高跨熵预测能力能实现超越 zstd 两倍以上的压缩比，但昂贵的 GPU 推理时间使其在**当前阶段难以大规模商用**。研究指出，按照当前的计算和存储成本，基于大语言模型的压缩需要10年才能\"回本\"，省下的每一分存储费，需要攒足 10 年才能抵消掉当初为了执行压缩而付出的那笔算力成本。与传统压缩方法相比，基于大语言模型的压缩需要120年才能赶上传统压缩方法。与那些免费或极低成本的传统压缩方案相比，LLM 压缩多省出来的存储费，需要存 120 年才能把多花的算力费赚回来。研究进一步预测了硬件算力与存储成本的演进曲线，明确了 AI 压缩走向实用化的时间节点。随着硬件和模型效率的预期提升，基于大语言模型的压缩可能在未来十年内具备经济可行性。尽管现在看来极其不划算，但随着 GPU 和专用 AI 芯片（如 NPU）的性能提升和价格下降，成本曲线正在快速下降，在未来十年内AI 压缩省下的钱将能快速覆盖其计算成本，具备实际部署的价值。开源链接：https://github.com/utndatasystems/compression-economics",
     "link": "https://vldb.org/cidrdb/papers/2026/p34-kipf.pdf",
     "tags": ["数据压缩", "LLM 推理优化", "存储成本建模", "硬件趋势预测"]
   },
@@ -105,7 +105,7 @@ export const expressPapers = [
     "recommendation": 5,
     "authors": "Jiayi Liu, Yunan Zhang, Chenzhe Jin, Aditya Gupta, Shige Liu, Jianguo Wang",
     "affiliation": "Purdue University（普渡大学）",
-    "abstract": "该研究针对集成式向量数据库性能瓶颈，提出了将向量索引与数据库核心存储引擎**解耦**的核心思想。PostgreSQL-V引入 LSM 架构来直接利用原生向量索引库（如 Faiss）实现高性能。对于解耦操作引入的索引不一致挑战，设计了基于状态页（Status Pages）的轻量级元数据管理方案。实验证明其搜索性能达到专用数据库级别。（开源链接：https://github.com/purduedb/PostgreSQL-V）",
+    "abstract": "该研究针对集成式向量数据库性能瓶颈，提出了将向量索引与数据库核心存储引擎**解耦**的核心思想。PostgreSQL-V引入 LSM 架构来直接利用原生向量索引库（如 Faiss）实现高性能。对于解耦操作引入的索引不一致挑战，设计了基于状态页（Status Pages）的轻量级元数据管理方案。实验证明其搜索性能达到专用数据库级别。开源链接：https://github.com/purduedb/PostgreSQL-V",
     "link": "https://vldb.org/cidrdb/papers/2026/p2-liu.pdf",
     "tags": ["向量数据库", "解耦索引", "LSM 引擎", "检索增强生成 (RAG)"]
   },
@@ -127,7 +127,7 @@ export const expressPapers = [
     "recommendation": 4,
     "authors": "Tengjun Jin, Yoojin Choi, Yuxuan Zhu, Daniel Kang",
     "affiliation": "UIUC（伊利诺伊大学厄巴纳-香槟分校）",
-    "abstract": "当前主流 Text-to-SQL 基准测试在可靠性方面存在缺陷，数据集中普遍存在的**标注错误与模糊问题**已削弱其评估效力。为此，该研究针对 BIRD 和 Spider 2.0-Snow 两大广泛使用的基准进行了深度剖析，旨在揭示错误模式并构建更高质量的评估体系。该研究通过以下机制拆解错误成因：1）**分类化错误诊断**：将标注问题归纳为 SQL 语义错位、数据库理解偏差、领域知识匮乏及自然语言歧义四类，精准定位了引擎评测中的失效点 ；2）**动态数据库修正**：通过向数据库插入区分性测试案例，解决了错误查询在特定数据集下产生“假阳性”结果的掩盖效应。评测成效显示，BIRD Mini-Dev 与 Spider 2.0-Snow 的错误率分别高达 52.8% 和 66.1%。进一步地，在修正后的基准上重测发现，主流智能体的相对性能波动幅度在 -3% 至 31% 之间，部分排名变动达三个位次，这证实了现有榜单难以真实反映技术水平。（开源链接：https://github.com/xlang-ai/Spider2/blob/main/spider2-snow/spider2-snow-0713.jsonl）",
+    "abstract": "当前主流 Text-to-SQL 基准测试在可靠性方面存在缺陷，数据集中普遍存在的**标注错误与模糊问题**已削弱其评估效力。为此，该研究针对 BIRD 和 Spider 2.0-Snow 两大广泛使用的基准进行了深度剖析，旨在揭示错误模式并构建更高质量的评估体系。该研究通过以下机制拆解错误成因：1）**分类化错误诊断**：将标注问题归纳为 SQL 语义错位、数据库理解偏差、领域知识匮乏及自然语言歧义四类，精准定位了引擎评测中的失效点 ；2）**动态数据库修正**：通过向数据库插入区分性测试案例，解决了错误查询在特定数据集下产生“假阳性”结果的掩盖效应。评测成效显示，BIRD Mini-Dev 与 Spider 2.0-Snow 的错误率分别高达 52.8% 和 66.1%。进一步地，在修正后的基准上重测发现，主流智能体的相对性能波动幅度在 -3% 至 31% 之间，部分排名变动达三个位次，这证实了现有榜单难以真实反映技术水平。开源链接：https://github.com/xlang-ai/Spider2/blob/main/spider2-snow/spider2-snow-0713.jsonl",
     "link": "https://vldb.org/cidrdb/papers/2026/p5-jin.pdf",
     "tags": ["Text-to-SQL", "基准测试评估", "大语言模型"]
   },
@@ -149,7 +149,7 @@ export const expressPapers = [
     "recommendation": 4,
     "authors": "Fabian Wenz, Omar Bouattour, Devin Yang, Justin Choi, Cecil Gregg, Nesime Tatbul, Çağatay Demiralp",
     "affiliation": "TUM（慕尼黑工业大学）, MIT（麻省理工学院）",
-    "abstract": "现有 Text-to-SQL 模型在处理私有企业级数据时，常因模式复杂、领域术语多及隐私限制，导致执行准确率较公共数据集大幅下降。面对这一瓶颈，该研究推出了 BenchPress 系统，旨在通过人机协同的方式，利用海量 SQL 日志快速构建领域定制化基准测试。在架构底层，系统核心机制包括：1）**检索增强生成（RAG）**：利用向量嵌入技术从历史标注中提取语义相似案例，结合 Schema 上下文引导模型生成精准的自然语言描述 ；2）**查询解耦与重组**：针对嵌套 SQL 自动进行 CTE 转换，分步生成语义块并最终合并，有效降低了标注复杂逻辑时的认知负荷。评测成效显示，在 BEAVER 企业级数据集的测试中，BenchPress 的标注准确率达到 86.1%，远超手工标注，且总标注耗时从 183.9 分钟缩减至 28.1 分钟。目前，该系统已通过开源仓库公开发布。（开源链接：https://github.com/fabian-wenz/enterprise-txt2sql）",
+    "abstract": "现有 Text-to-SQL 模型在处理私有企业级数据时，常因模式复杂、领域术语多及隐私限制，导致执行准确率较公共数据集大幅下降。面对这一瓶颈，该研究推出了 BenchPress 系统，旨在通过人机协同的方式，利用海量 SQL 日志快速构建领域定制化基准测试。在架构底层，系统核心机制包括：1）**检索增强生成（RAG）**：利用向量嵌入技术从历史标注中提取语义相似案例，结合 Schema 上下文引导模型生成精准的自然语言描述 ；2）**查询解耦与重组**：针对嵌套 SQL 自动进行 CTE 转换，分步生成语义块并最终合并，有效降低了标注复杂逻辑时的认知负荷。评测成效显示，在 BEAVER 企业级数据集的测试中，BenchPress 的标注准确率达到 86.1%，远超手工标注，且总标注耗时从 183.9 分钟缩减至 28.1 分钟。目前，该系统已通过开源仓库公开发布。开源链接：https://github.com/fabian-wenz/enterprise-txt2sql",
     "link": "https://vldb.org/cidrdb/papers/2026/p16-wenz.pdf",
     "tags": ["数据标注", "Text-to-SQL", "人机协同", "企业级基准"]
   },
@@ -182,7 +182,7 @@ export const expressPapers = [
       recommendation: 5, 
       authors: 'Michael Stonebraker, Xinjing Zhou, Peter Kraft, Qian Li', 
       affiliation: 'Massachusetts Institute of Technology (麻省理工学院), DBOS', 
-      abstract: '面向数据的**工作流系统**易因故障出现执行异常，且错误处理代码占比极高，现有**持久化执行**仅能保障正向流程运行，无法解决异常后的一致性问题。为此，研究提出将 ACID 特性从单事务扩展至整个工作流的 **AC/DC 语义保障**，打造基于数据库的工作流原型系统，打破传统工作流在故障恢复与并发一致性上的局限。该系统核心创新体现在两点：1）**持久化计算机制**，将工作流日志与数据库操作原子提交，实现步骤的恰好一次执行，故障后可从最后完成步骤恢复；2）**双回滚机制**，支持基于保存点的**物理回滚**和**Saga补偿回滚**，前者保障强一致性，后者提升并发性能。研究基于电商结账工作流开展实验，发现低竞争场景下物理回滚工作流性能更优，高竞争或长步骤场景下补偿回滚方案吞吐更高且无中止，物理回滚则会出现较高中止率。该原型已在 DBOS 中实现，相关代码完成原型开发。（开源链接：https://github.com/DBOS-project/dbos-transact-py）', // 摘要
+      abstract: '面向数据的**工作流系统**易因故障出现执行异常，且错误处理代码占比极高，现有**持久化执行**仅能保障正向流程运行，无法解决异常后的一致性问题。为此，研究提出将 ACID 特性从单事务扩展至整个工作流的 **AC/DC 语义保障**，打造基于数据库的工作流原型系统，打破传统工作流在故障恢复与并发一致性上的局限。该系统核心创新体现在两点：1）**持久化计算机制**，将工作流日志与数据库操作原子提交，实现步骤的恰好一次执行，故障后可从最后完成步骤恢复；2）**双回滚机制**，支持基于保存点的**物理回滚**和**Saga补偿回滚**，前者保障强一致性，后者提升并发性能。研究基于电商结账工作流开展实验，发现低竞争场景下物理回滚工作流性能更优，高竞争或长步骤场景下补偿回滚方案吞吐更高且无中止，物理回滚则会出现较高中止率。该原型已在 DBOS 中实现，相关代码完成原型开发。开源链接：https://github.com/DBOS-project/dbos-transact-py', // 摘要
       link: 'https://mail.vldb.org/cidrdb/papers/2026/p9-stonebraker.pdf', 
       tags: ['工作流', '持久化', '原子性', '并发性能'] 
     },
@@ -193,7 +193,7 @@ export const expressPapers = [
       recommendation: 3, 
       authors: 'Jonathan Arns, Harald Ng, Kyriakos Psarakis, Asterios Katsifodimos, Paris Carbone', 
       affiliation: 'KTH Royal Institute of Technology（瑞典皇家理工学院）, Ververica GmbH(维沃瑞卡有限公司), Delft University of Technology(荷兰代尔夫特理工大学)', 
-      abstract: '现有**地理分布式应用**的混合一致性模型因采用二元冲突视角、忽视操作间的非对称依赖，存在过度协调的问题，难以**兼顾低延迟与状态一致性**。面对这一挑战，研究提出**半线性化（SL）一致性模型**，并实现了 DeMon 地理复制内存存储系统，通过捕捉操作间的**定向依赖关系**，仅在必要时执行协调，打破强、弱一致性的僵化二分局限。研究首先形式化定义非对称操作依赖，精准表达应用不变量，摆脱传统二元冲突的限制；其次设计半线性化顺序，将强操作严格排序、弱操作以因果一致性归为数据包，仅当强操作形成 “事件视界” 时才统一收敛发散状态；最后 DeMon 通过共识协议处理强操作、因果广播执行弱操作，结合水印机制保障操作间的正确序关系。在跨 5 个地域的 RUBiS 基准测试中，该系统让占比 60% 的 Bid 操作实现亚毫秒级延迟，相比主流系统，其最频繁操作的延迟降低四个数量级，且在吞吐量与协调开销上均展现出更优的表现，强操作延迟与纯共识协议持平，弱操作则保持无协调的高效执行。（开源链接：https://github.com/JonathanArns/demon）', 
+      abstract: '现有**地理分布式应用**的混合一致性模型因采用二元冲突视角、忽视操作间的非对称依赖，存在过度协调的问题，难以**兼顾低延迟与状态一致性**。面对这一挑战，研究提出**半线性化（SL）一致性模型**，并实现了 DeMon 地理复制内存存储系统，通过捕捉操作间的**定向依赖关系**，仅在必要时执行协调，打破强、弱一致性的僵化二分局限。研究首先形式化定义非对称操作依赖，精准表达应用不变量，摆脱传统二元冲突的限制；其次设计半线性化顺序，将强操作严格排序、弱操作以因果一致性归为数据包，仅当强操作形成 “事件视界” 时才统一收敛发散状态；最后 DeMon 通过共识协议处理强操作、因果广播执行弱操作，结合水印机制保障操作间的正确序关系。在跨 5 个地域的 RUBiS 基准测试中，该系统让占比 60% 的 Bid 操作实现亚毫秒级延迟，相比主流系统，其最频繁操作的延迟降低四个数量级，且在吞吐量与协调开销上均展现出更优的表现，强操作延迟与纯共识协议持平，弱操作则保持无协调的高效执行。开源链接：https://github.com/JonathanArns/demon', 
       link: 'https://www.vldb.org/cidrdb/papers/2026/p20-arns.pdf', 
       tags: ['地理分布式应用', '半线性化', '一致性模型'] 
     },
@@ -270,7 +270,7 @@ export const expressPapers = [
     recommendation: 3,
     authors: 'El Kindi Rezig, Mir Mahathir Mohammad, Nicolas Baret, Ricardo Mayerhofer, Andrew McNutt, Paul Rosen',
     affiliation: 'University of Utah（犹他大学）、Hopara, Inc（霍帕拉公司）',
-    abstract: '现有**数据整理工具**要么依赖易出错、难调试的手动脚本，要么依托可控性有限的黑盒自动化流水线，且可视化工具与数据修复流程相互脱节。该研究提出可扩展的**可视化数据整理系统** Buckaroo，将数据整理重构为基于可视化的直接操作任务，试图打通可视化检查与可编程修复的壁垒。该系统以**数据分组**为核心，搭建了可扩展的异常检测与修复框架，通过本地化检测策略减少重复计算，还集成 Hopara 引擎实现大规模数据集的多层交互式导航，同时支持操作回溯与修复脚本自动生成。在十万规模的数据集测试中，系统核心操作响应时间低于1s，具有降低数据整理技术门槛的潜力。（开源链接：https://github.com/shapevis/BuckarooVisualWrangler）',
+    abstract: '现有**数据整理工具**要么依赖易出错、难调试的手动脚本，要么依托可控性有限的黑盒自动化流水线，且可视化工具与数据修复流程相互脱节。该研究提出可扩展的**可视化数据整理系统** Buckaroo，将数据整理重构为基于可视化的直接操作任务，试图打通可视化检查与可编程修复的壁垒。该系统以**数据分组**为核心，搭建了可扩展的异常检测与修复框架，通过本地化检测策略减少重复计算，还集成 Hopara 引擎实现大规模数据集的多层交互式导航，同时支持操作回溯与修复脚本自动生成。在十万规模的数据集测试中，系统核心操作响应时间低于1s，具有降低数据整理技术门槛的潜力。开源链接：https://github.com/shapevis/BuckarooVisualWrangler',
     link: 'https://vldb.org/cidrdb/2026/towards-scalable-visual-data-wrangling-via-direct-manipulation.html',
     tags: ['数据整理','可视化分析']
   },
@@ -292,7 +292,7 @@ export const expressPapers = [
     recommendation: 4,
     authors: 'Timo Eckmann, Carsten Binnig',
     affiliation: 'Technical University of Darmstadt（德国达姆施塔特工业大学）',
-    abstract: '传统**多数据源查询**依赖中心化集成与固定全局模式，成本高且难适配数据源的规模、异构性与动态性。对此，研究设计**去中心化查询协作协议**，实现**异构数据源**无全局模式的动态查询。其核心创新有两点：一是搭建含查询协调器、自治数据代理、结果代理的 QCP 系统，各组件各司其职完成分布式协同查询；二是设计生成反馈循环和代码生成式结果对齐机制，分别解决语义错位问题、实现异构数据归一化与多源结果融合。研究实现 QCP-DB 原型，在改造后的 BIRD 基准测试中，该原型 4 代理下的执行精度与中心化系统相近，增加代理或加入数据模式噪声后，性能仅小幅下降。（开源链接：https://github.com/DataManagementLab/A-Vision-for-Autonomous-Data-AgentCollaboration）',
+    abstract: '传统**多数据源查询**依赖中心化集成与固定全局模式，成本高且难适配数据源的规模、异构性与动态性。对此，研究设计**去中心化查询协作协议**，实现**异构数据源**无全局模式的动态查询。其核心创新有两点：一是搭建含查询协调器、自治数据代理、结果代理的 QCP 系统，各组件各司其职完成分布式协同查询；二是设计生成反馈循环和代码生成式结果对齐机制，分别解决语义错位问题、实现异构数据归一化与多源结果融合。研究实现 QCP-DB 原型，在改造后的 BIRD 基准测试中，该原型 4 代理下的执行精度与中心化系统相近，增加代理或加入数据模式噪声后，性能仅小幅下降。开源链接：https://github.com/DataManagementLab/A-Vision-for-Autonomous-Data-AgentCollaboration',
     link: 'https://vldb.org/cidrdb/2026/a-vision-for-autonomous-data-agent-collaboration-from-query-by-integration-to-query-by-collaboration.html',
     tags: ['数据管理','异构数据源','分布式数据查询']
   },
@@ -303,7 +303,7 @@ export const expressPapers = [
     "recommendation": 4,
     "authors": "Emil Houlborg, Andreas Nicolaj Tietgen, Javier González, Simon A. F. Lund, Vivek Shah",
     "affiliation": "IT University of Copenhagen（哥本哈根信息技术大学）, Samsung（三星）",
-    "abstract": "现有数据库管理系统在适配多样化 NVMe 设备时，常受限于传统 POSIX 文件系统接口和同步 I/O 方式，导致现代 NVMe 存储的高性能潜力无法被充分发挥。为此，该研究引入 xNVMe 库并为 DuckDB 构建了名为 nvmefs 的文件系统扩展，旨在通过统一的消息传递 API 整合多样的存储 I/O 路径，让 DuckDB 能够高效适配现代 NVMe 硬件与各类 I/O 技术。在架构底层，核心设计包括：1）**多 I/O 路径封装机制**：利用 xNVMe 封装了 io_uring、libaio 及 SPDK 等多种 I/O 路径，解决了数据库在不同操作系统、存储协议下适配多样化 I/O 栈的开发与移植难题；2）**直接块访问模型**：通过 nvmefs 遵循 DuckDB 的文件抽象，底层直接与磁盘块交互并将数据映射至逻辑块地址，而非通过传统文件系统管理数据。评测成效显示，在 DuckDB 数据库的实际测试中，该架构让 DuckDB 成功调用了 IO Passthru、SPDK 与灵活数据放置（FDP）技术，无手动调优的情况下，I/O 密集型查询的执行耗时最高降低 50%，非 I/O 密集型场景的性能与 DuckDB 默认的同步 I/O 表现相当。目前，该 nvmefs 扩展已在 DuckDB 环境中完成集成与性能验证，且可基于 xNVMe 灵活切换各类 I/O 后端。（开源链接：https://github.com/OpenMPDK/xNVMe）",
+    "abstract": "现有数据库管理系统在适配多样化 NVMe 设备时，常受限于传统 POSIX 文件系统接口和同步 I/O 方式，导致现代 NVMe 存储的高性能潜力无法被充分发挥。为此，该研究引入 xNVMe 库并为 DuckDB 构建了名为 nvmefs 的文件系统扩展，旨在通过统一的消息传递 API 整合多样的存储 I/O 路径，让 DuckDB 能够高效适配现代 NVMe 硬件与各类 I/O 技术。在架构底层，核心设计包括：1）**多 I/O 路径封装机制**：利用 xNVMe 封装了 io_uring、libaio 及 SPDK 等多种 I/O 路径，解决了数据库在不同操作系统、存储协议下适配多样化 I/O 栈的开发与移植难题；2）**直接块访问模型**：通过 nvmefs 遵循 DuckDB 的文件抽象，底层直接与磁盘块交互并将数据映射至逻辑块地址，而非通过传统文件系统管理数据。评测成效显示，在 DuckDB 数据库的实际测试中，该架构让 DuckDB 成功调用了 IO Passthru、SPDK 与灵活数据放置（FDP）技术，无手动调优的情况下，I/O 密集型查询的执行耗时最高降低 50%，非 I/O 密集型场景的性能与 DuckDB 默认的同步 I/O 表现相当。目前，该 nvmefs 扩展已在 DuckDB 环境中完成集成与性能验证，且可基于 xNVMe 灵活切换各类 I/O 后端。开源链接：https://github.com/OpenMPDK/xNVMe",
     "link": "https://vldb.org/cidrdb/papers/2026/p6-houlborg.pdf",
     "tags": ["NVMe存储优化", "软硬协同", "DuckDB扩展", "I/O性能提升"]
   },
@@ -347,7 +347,7 @@ export const expressPapers = [
       recommendation: 5, 
       authors: 'Bobbi Yogatama, Yifei Yang, Kevin Kristensen, Devesh Sarda, Abigale Kim, Adrian Cockcroft, Yu Teng, Joshua Patterson, Gregory Kimball, Wes McKinney, Weiwei Gong, Xiangyao Yu', 
       affiliation: 'University of Wisconsin-Madison(威斯康星大学麦迪逊分校), NVIDIA(英伟达), Oracle(甲骨文), Posit PBC(波西特公益公司), OrionX(奥瑞恩 X 公司)', 
-      abstract: '**GPU 数据分析**曾受限于显存不足、数据移动瓶颈、硬件成本高和开发难度大等问题，当下硬件的显存扩容、高速互连技术发展及成本下降，叠加软件生态的成熟，为突破该瓶颈提供了基础，该研究为此提出 **GPU 原生 SQL 引擎 Sirius**，以实现对现有数据系统的**即插式加速**，打破 GPU 数据分析的落地局限。Sirius 采用 **GPU 原生执行**设计，将 GPU 作为核心执行引擎，全程在 GPU 完成查询计划执行，降低架构设计复杂度；依托 **Substrait 通用查询计划格式**实现即插式加速，无需修改宿主系统即可完成 GPU 加速适配；搭建模块化架构，复用成熟 GPU 库实现核心算子，还支持算子实现方式的**灵活切换**并设计 **CPU 降级机制**。在 TPC-H 和 ClickBench 基准测试中，Sirius 为单节点 DuckDB 带来 8.3 倍和 7.4 倍的成本效率提升，为分布式 Apache Doris 实现最高 12.5 倍的性能加速，在分布式 TPC-H 测试中也展现出优于 Doris 和 ClickHouse 的执行效率。（开源链接：https://github.com/sirius-db/sirius）', 
+      abstract: '**GPU 数据分析**曾受限于显存不足、数据移动瓶颈、硬件成本高和开发难度大等问题，当下硬件的显存扩容、高速互连技术发展及成本下降，叠加软件生态的成熟，为突破该瓶颈提供了基础，该研究为此提出 **GPU 原生 SQL 引擎 Sirius**，以实现对现有数据系统的**即插式加速**，打破 GPU 数据分析的落地局限。Sirius 采用 **GPU 原生执行**设计，将 GPU 作为核心执行引擎，全程在 GPU 完成查询计划执行，降低架构设计复杂度；依托 **Substrait 通用查询计划格式**实现即插式加速，无需修改宿主系统即可完成 GPU 加速适配；搭建模块化架构，复用成熟 GPU 库实现核心算子，还支持算子实现方式的**灵活切换**并设计 **CPU 降级机制**。在 TPC-H 和 ClickBench 基准测试中，Sirius 为单节点 DuckDB 带来 8.3 倍和 7.4 倍的成本效率提升，为分布式 Apache Doris 实现最高 12.5 倍的性能加速，在分布式 TPC-H 测试中也展现出优于 Doris 和 ClickHouse 的执行效率。开源链接：https://github.com/sirius-db/sirius', 
       link: 'https://www.cidrdb.org/cidr2026/papers/p12-yogatama.pdf', 
       tags: ['GPU', '即插式加速'] 
     },
@@ -358,7 +358,7 @@ export const expressPapers = [
       recommendation: 3, 
       authors: 'Harish Doraiswamy, Jayant R. Haritsa', 
       affiliation: 'Microsoft Research(微软研究院), Indian Institute of Science(印度科学学院)', 
-      abstract: '现有**基于 GPU 光线追踪（RT）**的**数据库列索引**方案，因需执行计算密集的光线（几何相交检测、BVH 树遍历）存在内存**访问模式不规则**与**负载均衡**问题，在索引构建和查询中存在性能瓶颈。为此，研究提出**纯光栅化的索引方案 RasterScan**，沿用 RT 类方法的数据模型，以光栅化管线替代光线追踪完成索引构建与查询，打破了光线追踪在数据库索引场景的算力冗余局限。该方案核心创新有二：1）索引构建机制，将数据点映射为纹理像素并分阶段完成分箱与数据分配，通过简单算术运算和原子操作替代 BVH 树构建，大幅降低内存与计算开销；2）索引查询机制，将查询谓词转化为纹理空间的几何图形绘制，以算术值比较替代光线相交检测，分两步完成纹理与缓冲区搜索并最大化 GPU 并行性。研究在含 1 亿条 3 列数据的均匀、Zipf 分布及正态分布数据集上，基于 RTX 4090 等多款 GPU 对 RasterScan 与主流 RT 方案 RTScan 开展对比测试，发现前者索引构建速度提升约 50 倍，查询速度提升超一个数量级，且内存占用仅为 RTScan 的约三分之一，在不同算力 GPU 上均展现出适配性，同时可以通过纹理分辨率调优找到性能最优配置。RasterScan 还可扩展支持多类型数值列、非数值列及索引更新，适配 OLAP 场景需求。（开源链接：https://github.com/Microsoft/raster-scan）', 
+      abstract: '现有**基于 GPU 光线追踪（RT）**的**数据库列索引**方案，因需执行计算密集的光线（几何相交检测、BVH 树遍历）存在内存**访问模式不规则**与**负载均衡**问题，在索引构建和查询中存在性能瓶颈。为此，研究提出**纯光栅化的索引方案 RasterScan**，沿用 RT 类方法的数据模型，以光栅化管线替代光线追踪完成索引构建与查询，打破了光线追踪在数据库索引场景的算力冗余局限。该方案核心创新有二：1）索引构建机制，将数据点映射为纹理像素并分阶段完成分箱与数据分配，通过简单算术运算和原子操作替代 BVH 树构建，大幅降低内存与计算开销；2）索引查询机制，将查询谓词转化为纹理空间的几何图形绘制，以算术值比较替代光线相交检测，分两步完成纹理与缓冲区搜索并最大化 GPU 并行性。研究在含 1 亿条 3 列数据的均匀、Zipf 分布及正态分布数据集上，基于 RTX 4090 等多款 GPU 对 RasterScan 与主流 RT 方案 RTScan 开展对比测试，发现前者索引构建速度提升约 50 倍，查询速度提升超一个数量级，且内存占用仅为 RTScan 的约三分之一，在不同算力 GPU 上均展现出适配性，同时可以通过纹理分辨率调优找到性能最优配置。RasterScan 还可扩展支持多类型数值列、非数值列及索引更新，适配 OLAP 场景需求。开源链接：https://github.com/Microsoft/raster-scan', 
       link: 'https://www.cidrdb.org/cidr2026/papers/p18-doraiswamy.pdf', 
       tags: ['GPU', '数据库列索引', '光线追踪', '光栅化索引方案'] 
     },
@@ -380,7 +380,7 @@ export const expressPapers = [
       recommendation: 4, 
       authors: 'Wentao Huang, Mian Lu, Kian-Lee Tan', 
       affiliation: 'National University of Singapore(新加坡国立大学), 4Paradigm Inc.(第四范式)', 
-      abstract: '**CXL 技术**虽能融合 DRAM 与 CXL 内存形成交错内存层提升带宽，但现有方案未考量将 CXL 内存数据迁移至该层级的**额外开销**，反而可能降低内存密集型工作负载的性能，这成为 CXL 赋能数据库系统的核心瓶颈。面对这一挑战，研究以主存哈希连接为研究对象展开分析，提出**兼顾带宽收益与数据迁移成本**的性能模型，核心设计理念为仅**将部分 CXL 内存数据迁移至 DRAM**，打破全量迁移的性能局限。1）构建**数据迁移流量模型**，揭示直接将数据从 CXL 迁移至 DRAM 的吞吐率高于迁移至交错内存层的特性，为部分迁移策略提供理论支撑；2）设计**端到端性能模型**，线性拟合 DRAM 数据占比对执行吞吐的影响，推导出最优数据迁移比例，平衡迁移开销与带宽提升收益；3）针对**分区哈希连接**和**非分区哈希连接**的不同执行阶段，适配差异化的部分数据迁移策略，让分区阶段和建表、探测阶段分别发挥带宽优势。研究在符合 CXL 1.1 规范的平台上，基于 16M、64M、256M 基数的等值连接基准测试验证，该策略相较次优的 CXL 内直接执行策略，使分区哈希连接运行时减少 22.20%，非分区哈希连接减少 3.59%，且性能提升效果在不同建表-探测基数比下保持稳定。（开源链接：https://github.com/fukien/hashjoins-meet-cxl）', 
+      abstract: '**CXL 技术**虽能融合 DRAM 与 CXL 内存形成交错内存层提升带宽，但现有方案未考量将 CXL 内存数据迁移至该层级的**额外开销**，反而可能降低内存密集型工作负载的性能，这成为 CXL 赋能数据库系统的核心瓶颈。面对这一挑战，研究以主存哈希连接为研究对象展开分析，提出**兼顾带宽收益与数据迁移成本**的性能模型，核心设计理念为仅**将部分 CXL 内存数据迁移至 DRAM**，打破全量迁移的性能局限。1）构建**数据迁移流量模型**，揭示直接将数据从 CXL 迁移至 DRAM 的吞吐率高于迁移至交错内存层的特性，为部分迁移策略提供理论支撑；2）设计**端到端性能模型**，线性拟合 DRAM 数据占比对执行吞吐的影响，推导出最优数据迁移比例，平衡迁移开销与带宽提升收益；3）针对**分区哈希连接**和**非分区哈希连接**的不同执行阶段，适配差异化的部分数据迁移策略，让分区阶段和建表、探测阶段分别发挥带宽优势。研究在符合 CXL 1.1 规范的平台上，基于 16M、64M、256M 基数的等值连接基准测试验证，该策略相较次优的 CXL 内直接执行策略，使分区哈希连接运行时减少 22.20%，非分区哈希连接减少 3.59%，且性能提升效果在不同建表-探测基数比下保持稳定。开源链接：https://github.com/fukien/hashjoins-meet-cxl', 
       link: 'https://www.cidrdb.org/cidr2026/papers/p1-huang.pdf', 
       tags: ['CXL', '哈希连接', '数据迁移'] 
     },
