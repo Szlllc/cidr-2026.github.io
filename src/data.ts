@@ -449,15 +449,15 @@ export const deepDivePapers = [
     },
     {
       "name": "RabitQ 算法技术白皮书",
-      "link": "https://vectorchord.com/resources/rabitq-quantization-whitepaper.pdf"
+      "link": "https://arxiv.org/abs/2405.12497"
     },
     {
       "name": "VectorChord 中 RabitQ 实现源码",
-      "link": "https://github.com/vectorchord/vectorchord/tree/main/src/quantization/rabitq"
+      "link": "https://github.com/tensorchord/VectorChord/tree/main/crates/rabitq"
     },
     {
       "name": "VectorChord 官方 GitHub 仓库",
-      "link": "https://github.com/vectorchord/vectorchord"
+      "link": "https://github.com/tensorchord/VectorChord"
     }
     ]
   },
@@ -595,6 +595,7 @@ export const deepDivePapers = [
     "extendedResources": [ // 扩展资料名称及其链接，若无链接，则无需填写 link 字段
       { "name": 'Sirius 项目主页', "link": 'https://github.com/sirius-db/sirius' },
       { "name": 'CIDR 2026 论文原文：Rethinking Analytical Processing in the GPU Era',"link": 'https://vldb.org/cidrdb/papers/2026/p12-yogatama.pdf' },
+      { "name": '论文双语翻译',"link": 'http://tprd.dameng.com/outline/s/1fe477ac-a769-44a8-bcc5-163408b5b9d6' },
       { "name": '相关阅读：Substrait 官方文档',"link": 'https://substrait.io/' }
     ]
   },
@@ -647,6 +648,7 @@ export const deepDivePapers = [
       }
     ],
     "extendedResources": [ // 扩展资料名称及其链接，若无链接，则无需填写 link 字段
+      { "name": '论文双语翻译', "link": 'http://tprd.dameng.com/outline/s/8900fea2-4484-4e36-b912-8857ffae75eb' },
       { "name": '论文解读', "link": 'http://muratbuffalo.blogspot.com/2025/09/supporting-our-ai-overlords-redesigning.html' }
     ]
   },
@@ -711,7 +713,8 @@ export const deepDivePapers = [
     ],
     "extendedResources": [ // 扩展资料名称及其链接，若无链接，则无需填写 link 字段
       { "name": '项目主页', "link": 'https://github.com/DBOS-project/dbos-transact-py' },
-      { "name": 'CIDR 2026 论文原文', "link": 'https://mail.vldb.org/cidrdb/papers/2026/p9-stonebraker.pdf'}
+      { "name": 'CIDR 2026 论文原文', "link": 'https://mail.vldb.org/cidrdb/papers/2026/p9-stonebraker.pdf'},
+      { "name": '论文双语翻译', "link": 'http://tprd.dameng.com/outline/s/bf5f85f9-94fa-434d-97da-e60720f1a1dc'},
     ]
   },
   {
